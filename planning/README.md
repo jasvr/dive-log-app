@@ -14,6 +14,8 @@ However, keeping track of a physical notebook can be tedious, especially for div
 
 Extending the idea further, the app could make API calls to weather services to pre-fill information such as surface weather and/or wave conditions.
 
+:camera: Image of a PADI logbook, taken by Paul Blake in Dubai, UAE - 2018
+
 ## Data Models
 + User
   + Email
