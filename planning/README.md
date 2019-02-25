@@ -2,7 +2,7 @@
 
 ## Quick Stats
 + Name: TBD
-+ Tech stack: HTML/CSS/JS/Express/Mongo/Handlebars/Node, and possibly D3
++ Tech stack: HTML/CSS/JS/Express/Mongo/Handlebars/Node/lots of 'Life Aquatic with Steve Zissou' gifs, and possibly D3
 
 <img src="dive_log_example.jpeg" width="40%" align="right">
 
