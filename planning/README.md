@@ -40,7 +40,7 @@ Extending the idea further, the app could make API calls to weather services to 
   + Time out
   + Comments (text area)
   + Bottom time to date (automatic?)
-  + Verifiers (over USERS who can vouch for this dive)
+  + Verifiers (other USERS who can vouch for the veracity of this dive entry)
 
 + Dive Site
   + Name
@@ -53,3 +53,18 @@ Extending the idea further, the app could make API calls to weather services to 
   + Typical temperature
   + Average reported temperature
   + Summary
+
+## Resource Table
+
+| URL       | Path                    | Method            | Action | Description                                                                         |
+|-----------|-------------------------|-------------------|--------|-------------------------------------------------------------------------------------|
+| /         | /                       | index             | GET    | Show's a splash page                                                                |
+| /user     | /user/:id               | show              | GET    | Shows a single user their dashboard: Contains dives and analysis.                   |
+| /user     | /user/sign-up           | newUser           | GET    | Shows a form for signing up a new user.                                             |
+| /user     | /user/sign-up           | createNewUser     | POST   | Takes form data and creates a new user.                                             |
+| /dive     | /dive/:id               | showDive          | GET    | Shows details about a single dive. Bonus: Allows other users to vouch for the dive. |
+| /dive     | /dive/new-dive          | newDive           | GET    | Shows a form for registering a new dive.                                            |
+| /dive     | /dive/new-dive          | createNewDive     | POST   | Takes form data and creates a new dive.                                             |
+| /diveSite | /diveSite/:id           | showDiveSite      | GET    | Shows details about a dive site.                                                    |
+| /diveSite | /diveSite/new-dive-site | newDiveSite       | GET    | Shows a form for registering a new dive site.                                       |
+| /diveSite | /diveSite/new-dive-site | createNewDiveSite | POST   | Takes form data and creates a new dive site.                                        |
