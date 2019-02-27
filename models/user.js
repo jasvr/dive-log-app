@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
+const Dive = require("./dive");
 
 // const passportLocalMongoose = require("passport-local-mongoose");
 
