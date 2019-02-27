@@ -68,6 +68,7 @@ Extending the idea further, the app could make API calls to weather services to 
 | /dive     | /dive/:id               | showDive       | GET    | Shows details about a single dive. Bonus: Allows other users to vouch for the dive. |
 | /dive     | /dive/new-dive          | newDive        | GET    | Shows a form for registering a new dive.                                            |
 | /dive     | /dive/new-dive          | createNewDive  | POST   | Takes form data and creates a new dive.                                             |
-| /location | /location/:id           | showLocation   | GET    | Shows details about a dive site.                                                    |
-| /location | /location/new-dive-site | newLocation    | GET    | Shows a form for registering a new dive site.                                       |
-| /location | /location/new-dive-site | createLocation | POST   | Takes form data and creates a new dive site.                                        |
+| /divesite | /divesite/:id           | showDivesite   | GET    | Shows details about a dive site.                                                    |
+| /divesite | /divesite/all           | showAllDivesites| GET   | Shows all dive sites registered in the database.                                    |
+| /divesite | /divesite/new-dive-site | newDivesite    | GET    | Shows a form for registering a new dive site.                                       |
+| /divesite | /divesite/new-dive-site | createDivesite | POST   | Takes form data and creates a new dive site.                                        |
