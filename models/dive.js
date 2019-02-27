@@ -14,7 +14,7 @@ const DiveSchema = new Schema({
   airUsed: Number,
   bottomTime: Number,
   comments: String
-})
+});
 
 
-module.exports = ItemSchema;
+module.exports = DiveSchema;
