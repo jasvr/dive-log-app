@@ -1,6 +1,7 @@
 const mongoose = require("../db/connection");
 
 module.exports = {
-  Item: mongoose.model("Item", require("./item")),
-  User: mongoose.model("User", require("./user"))
+  Dive: mongoose.model("Dive", require("./dive")),
+  User: mongoose.model("User", require("./user")),
+  Location: mongoose.model("Location", require("./location"))
 };

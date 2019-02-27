@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 // const passportLocalMongoose = require("passport-local-mongoose");
 
 const UserSchema = new Schema({
-  username: String,
+  username: { type: String, required: true, trim: true },
   password: String,
   certification: String,
   certificationDate: String,
