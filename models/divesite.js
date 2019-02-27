@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const LocationSchema = new Schema({
+const DivesiteSchema = new Schema({
   id: Number,
   name: String,
   coordinates: String,
@@ -9,4 +9,4 @@ const LocationSchema = new Schema({
   description: String
 });
 
-module.exports = LocationSchema;
+module.exports = DivesiteSchema;

@@ -4,9 +4,9 @@ const Schema = mongoose.Schema;
 const DiveSchema = new Schema({
   diveNumber: Number,
   diveDate: { type: Date, default: Date.now() },
-  location: {
+  divesite: {
     type: Schema.Types.ObjectId,
-    ref: "Location"
+    ref: "Divesite"
   },
   visibility: Number,
   airTemp: Number,
