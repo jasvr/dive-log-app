@@ -42,7 +42,7 @@ Extending the idea further, the app could make API calls to weather services to 
   + ~~Time out~~
   + Bottom Time
   + Comments (text area)
-  + Bottom time to date (automatic?)
+  + ~Bottom time to date (automatic?)~
   + **BONUS**: Verifiers (other USERS who can vouch for the veracity of this dive entry)
 
 + Dive Location (LocationSchema)
