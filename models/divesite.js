@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const DivesiteSchema = new Schema({
-  id: Number,
+  // id: Number,
   name: String,
   coordinates: String,
   type: String,
