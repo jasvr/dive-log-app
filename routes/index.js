@@ -7,6 +7,6 @@ router.get("/", (req,res) => {
   res.render("index");
 });
 
-router.use(require("./divesite"));
+router.use("/divesite", require("./divesite.js"));
 
 module.exports = router;

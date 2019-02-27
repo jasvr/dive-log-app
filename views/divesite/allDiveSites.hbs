@@ -1,0 +1,18 @@
+<section>
+  <div class="container-fluid allDivesContainer">
+    {{#if divesite}}
+      {{#each divesite}}
+        <div class="card diveCard">
+          <div class="card-header">
+            {{type}}
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">{{name}}</h5>
+            <p class="card-text">{{description}}</p>
+            <a href="/divesite/{{id}}" class="btn btn-primary">See more</a>
+          </div>
+        </div>
+      {{/each}}
+    {{/if}}
+  </div>
+</section>
