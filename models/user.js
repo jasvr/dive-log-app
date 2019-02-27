@@ -8,10 +8,7 @@ const UserSchema = new Schema({
   password: String,
   certification: String,
   certificationDate: String,
-  dives: {
-    type: Schema.Types.ObjectId,
-    ref: "Dive"
-  }
+  dives: [Dive]
 });
 
 // UserSchema.plugin(passportLocalMongoose);

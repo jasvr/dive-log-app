@@ -2,7 +2,8 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const DiveSchema = new Schema({
-  diveDate: Date, 
+  diveNumber: Number,
+  diveDate: { type: Date, default: Date.now() },
   location: {
     type: Schema.Types.ObjectId,
     ref: "Location"
@@ -15,6 +16,5 @@ const DiveSchema = new Schema({
   bottomTime: Number,
   comments: String
 });
-
 
 module.exports = DiveSchema;
