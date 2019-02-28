@@ -74,19 +74,4 @@ Dive.deleteMany({}).then(() => {
     });
   });
 
-  // Divesite.findOne({ name: "Dibba Rock" }, "_id").then(diveID => {
-  //   console.log("Dive id selected: " + diveID);
-  //   Dive.create({
-  //     number: 2,
-  //     site: diveID._id,
-  //     visitbility: 40,
-  //     airTemp: 88,
-  //     waterTemp: 81,
-  //     weightUsed: 7,
-  //     airUsed: 3200,
-  //     bottomTime: 42,
-  //     notes: "Took lots of great photos."
-  //   });
-  // });
-
 });
