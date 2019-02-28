@@ -55,6 +55,10 @@ body {
   margin: auto;
 }
 
+.singleDiveContainer .list-group {
+  margin-bottom: 1rem;
+}
+
 .newDiveRegistrationCard {
   width: 80%;
   margin: auto;
@@ -64,6 +68,10 @@ body {
 .userCard {
   width: 80%;
   margin: auto;
+}
+
+.dive-info-label {
+  font-weight: bold;
 }
 
 .particle-container {
