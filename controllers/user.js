@@ -26,13 +26,13 @@ module.exports = {
         user.certification = certification;
         user.certificationDate = certificationDate;
         user.save();
-        console.log("Got here.");
+        console.log("Got here."); 
 
         authenticate(req, res, function() {
           req.flash(req, res, function() {
             req.flash("success", "You created an account!");
             console.log("Got here 2.");
-            // res.direct("/");
+            res.direct("/");
           });
         });
       })
