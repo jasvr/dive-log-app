@@ -6,5 +6,8 @@ module.exports = {
       console.log(user);
       res.render("user/showUser.hbs", {user});
     });
+  },
+  newUser: function(req, res) {
+    res.render("user/userSignUp.hbs");
   }
 }

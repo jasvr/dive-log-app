@@ -6,7 +6,7 @@ const Dive = require("./dive");
 
 const UserSchema = new Schema({
   name: String,
-  username: { type: String, required: true, trim: true },
+  email: { type: String, required: true, trim: true },
   password: String,
   certification: String,
   certificationDate: String,
