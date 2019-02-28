@@ -58,6 +58,7 @@ body {
 .newDiveRegistrationCard {
   width: 80%;
   margin: auto;
+  margin-bottom: 5%;
 }
 
 .userCard {

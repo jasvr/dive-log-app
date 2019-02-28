@@ -5,31 +5,72 @@
   <div class="card-body">
     <form action="/dive/new-dive" method="post">
 
-      
-
-      {{!-- <div class="form-group">
-        <label for="name">Dive site name:</label>
-        <input type="text" class="form-control" name="name" id="name" placeholder="Enter dive site name">
+      <div class="form-group">
+        <label for="number">Dive Number:</label>
+        <input type="number" class="form-control" name="number" id="number">
       </div>
 
       <div class="form-group">
-        <label for="coordinates">Coordinates: </label>
-        <input type="text" class="form-control" name="coordinates" id="coordinates"
-          placeholder="Please enter the coordinates in Decimal Degrees (DD) - e.g. ±47.64896, ±122.34811">
+        <label for="date">Date:</label>
+        <input type="date" class="form-control" name="date" id="date">
       </div>
 
       <div class="form-group">
-        <label for="type">Type: </label>
-        <input type="text" class="form-control" id="type" name="type" 
-          placeholder="What type of site is this? E.g. 'Artificial Reef', 'Wreck', 'Coral Reef'">
+        <label for="site">Dive Site:</label>
+        <select name="site" class="custom-select" {{#unless divesites}}disable{{/unless}}>
+          {{#if divesites}}
+          {{#each divesites}}
+          <option value="{{id}}">{{name}}</option>
+          {{/each}}
+          {{else}}
+          <option>Please register some dive sites first.</option>
+          {{/if}}
+        </select>
+        <small class="form-text text-muted">Don't see your favorite dive site? Please <a href="../divesite/new-dive-site">add it to our database</a> before registering your dive.</small>
       </div>
 
       <div class="form-group">
-        <label for="description">Description: </label>
-        <textarea class="form-control" name="description" id="description" rows="3">Please provide a one paragraph description.</textarea>
+        <label for="visibility">Visibility:</label>
+        <input type="number" class="form-control" name="visibility" id="visibility">
+        <small class="form-text text-muted">Please take care to only enter this value in feet (ft).</small>
       </div>
 
-      <button type="submit" class="btn btn-primary">Submit</button> --}}
+      <div class="form-group">
+        <label for="airTemp">Air Temperature:</label>
+        <input type="number" class="form-control" name="airTemp" id="airTemp">
+        <small class="form-text text-muted">Please take care to only enter this value in fahrenheit (F) with no units.</small>
+      </div>
+
+      <div class="form-group">
+        <label for="waterTemp">Water Temperature:</label>
+        <input type="number" class="form-control" name="waterTemp" id="waterTemp">
+        <small class="form-text text-muted">Please take care to only enter this value in fahrenheit (F) with no units.</small>
+      </div>
+
+      <div class="form-group">
+        <label for="weightUsed">Weight Used:</label>
+        <input type="number" class="form-control" name="weightUsed" id="weightUsed">
+        <small class="form-text text-muted">Please take care to only enter this value in imperial pounds (lbs) with no units.</small>
+      </div>
+
+      <div class="form-group">
+        <label for="airUsed">Air Used:</label>
+        <input type="number" class="form-control" name="airUsed" id="airUsed">
+        <small class="form-text text-muted">Please take care to only enter this value in pounds per square inch (PSI) with no units.</small>
+      </div>
+
+      <div class="form-group">
+        <label for="bottomTime">Bottom Time:</label>
+        <input type="number" class="form-control" name="bottomTime" id="bottomTime">
+        <small class="form-text text-muted">Please take care to only enter this value in minutes with no units.</small>
+      </div>
+
+      <div class="form-group">
+        <label for="notes">Notes: </label>
+        <textarea class="form-control" name="notes" id="notes" rows="3" placeholder="What do you remember from this dive?"></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Log this dive</button>
     </form>
   </div>
 </div>
