@@ -29,11 +29,8 @@ module.exports = {
         console.log("Got here."); 
 
         authenticate(req, res, function() {
-          req.flash(req, res, function() {
-            req.flash("success", "You created an account!");
-            console.log("Got here 2.");
-            res.direct("/");
-          });
+          req.flash("success", "Welcome aboard!");
+          res.redirect("/");
         });
       })
       .catch(err => {
@@ -52,7 +49,6 @@ module.exports = {
       user,
       info
     ) {
-      console.log("Got here.");
       if (err || !user) {
         console.log("Error: " + info.message);
         req.flash("error", info.message);
@@ -67,11 +63,11 @@ module.exports = {
         }
 
         req.flash("success", "You logged in.");
-        console.log("Possibly successful login.");
+        console.log(`Successful login by ${user.username}.`);
         return res.redirect("/");
       });
     });
-
     authenticate(req, res, next);
-  }
+  },
+  
 };

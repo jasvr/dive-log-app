@@ -71,6 +71,7 @@ Extending the idea further, the app could make API calls to weather services to 
 | /user     | /user/login             | processLogin   | POST   | Sends login data.                                                                   |
 | /user     | /user/sign-up           | newUser        | GET    | Shows a form for signing up a new user.                                             |
 | /user     | /user/sign-up           | createNewUser  | POST   | Takes form data and creates a new user.                                             |
+| /user     | /user/logout            | processLogout  | GET    | Process a logout by the user.                                                       |
 | /dive     | /dive/:id               | showDive       | GET    | Shows details about a single dive. Bonus: Allows other users to vouch for the dive. |
 | /dive     | /dive/new-dive          | newDive        | GET    | Shows a form for registering a new dive.                                            |
 | /dive     | /dive/new-dive          | createNewDive  | POST   | Takes form data and creates a new dive.                                             |
