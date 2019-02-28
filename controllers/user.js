@@ -69,5 +69,8 @@ module.exports = {
     });
     authenticate(req, res, next);
   },
-  
+  processLogout: function(req, res) {
+    req.logout();
+    res.redirect("/");
+  }
 };
