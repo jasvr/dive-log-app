@@ -9,7 +9,6 @@ const UserSchema = new Schema({
   password: String,
   certification: String,
   certificationDate: String,
-  dives: [Dive]
 });
 
 // UserSchema.plugin(passportLocalMongoose);

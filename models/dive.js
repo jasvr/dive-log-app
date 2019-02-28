@@ -14,7 +14,8 @@ const DiveSchema = new Schema({
   weightUsed: Number,
   airUsed: Number,
   bottomTime: Number,
-  notes: String
+  notes: String,
+  owner: String
 });
 
 module.exports = DiveSchema;

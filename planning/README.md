@@ -20,42 +20,46 @@ Extending the idea further, the app could make API calls to weather services to 
 + User
   + Email
   + Password
-  + Dives (connected model)
   + Certificaton
   + Certification date
+  + ~~Dives (connected model)~~
 
 + Dive
-  + ~~Dive number (automatic?)~~
-  + Date
-  + Location
+  + Dive number (Could this default to whatever the previous one was +1?)
+  + Date (Defaults to entry date)
+  + Site
   + Visibility
   + Air Temperature
-  + ~~Surface Temperature~~
-  + ~~Bottom Temperature~~
   + Water Temperature
   + Weight Used
+  + Air Used
+  + Bottom Time
+  + Notes (text area)
+  + Owner (a USER)
+
+  + **BONUS**: Verifiers (other USERS who can vouch for the veracity of this dive entry)
+
   + ~~Exposure Protection (Tick boxes: Wetsuit / Dry Suit / Hood / Gloves / Boots)~~
   + ~~Start air pressure (need to decide PSI or bar)~~
   + ~~End air pressure (need to decide PSI or bar)~~
-  + Air Used
   + ~~Time in~~
   + ~~Time out~~
-  + Bottom Time
-  + Comments (text area)
-  + ~Bottom time to date (automatic?)~
-  + **BONUS**: Verifiers (other USERS who can vouch for the veracity of this dive entry)
+  + ~~Surface Temperature~~
+  + ~~Bottom Temperature~~
+  + ~~Bottom time to date (automatic?)~~
 
 + Dive Location (LocationSchema)
   + Name
-  + Location (coordinates?)
+  + Coordinates (coordinates?)
   + Type (shipwreck / reef)
+  + Description
+  
   + ~~Date created (sunk / built)~~
   + ~~Average Approximate Depth~~
   + ~~Typical visibility~~
   + ~~Average reported visibility (automatically calculated from user reports?)~~
   + ~~Typical temperature~~
   + ~~Average reported temperature~~
-  + Description
 
 ## Resource Table
 
