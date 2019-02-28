@@ -15,7 +15,12 @@ module.exports = {
     const { name, username, password, certification, certificationDate } = req.body;
     User.register(new User({ username }), password).then(user => {
       const authenticate = passport.authenticate("local");
-      authenticiate(req, res, function() {
+      user.name = name;
+      user.certification = certification;
+      user.certificationDate = certificationDate;
+      user.save();
+
+      authenticate(req, res, function() {
         req.flash(req, res, function() {
           req.flash("success", "You created an account!");
           res.direct("/");
@@ -31,9 +36,4 @@ module.exports = {
   showLogin: function(req, res) {
     res.render("user/login.hbs");
   }
-  // createNewUser: function(req, res) {
-  //   const { name, email, password, certification, certificationDate } = req.body;
-    
-    
-  // }
 }
