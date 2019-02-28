@@ -26,12 +26,20 @@
         <li class="nav-item active">
           <a class="nav-link" href="..">Home <span class="sr-only">(current)</span></a>
         </li>
+        {{#if user}}
+        {{!-- <li class="nav-item">
+          <a class="nav-link" href="../user/{{id}}">Your Dives</a>
+        </li> --}}
+        <li class="nav-item">
+          <a class="nav-link" href="../dive/new-dive">Log a New Dive</a>
+        </li>
+        {{/if}}
         <li class="nav-item">
           <a class="nav-link" href="../divesite/all">All Divesites</a>
         </li>
-        <li class="nav-item">
+        {{!-- <li class="nav-item">
           <a class="nav-link" href="../divesite/new-dive-site">New Dive Site</a>
-        </li>
+        </li> --}}
       </ul>
     </div>
 
