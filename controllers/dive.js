@@ -1,4 +1,4 @@
-const { Dive } = require("../models/dive");
+const { Dive } = require("../models/index");
 const { Divesite } = require("../models/index");
 
 module.exports = {
@@ -20,8 +20,6 @@ module.exports = {
       bottomTime,
       notes
     } = req.body;
-    const owner = req.user;
-    console.log("Owner: " + owner);
     Dive.create({
       number,
       date,
@@ -33,9 +31,9 @@ module.exports = {
       airUsed,
       bottomTime,
       notes,
-      owner
+      owner: req.user._id
     }).then(newDive => {
-      res.redirect(`/user/${owner}`);
+      res.redirect(`/user/${req.user._id}`);
     });
   }
 };
