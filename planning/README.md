@@ -67,6 +67,8 @@ Extending the idea further, the app could make API calls to weather services to 
 |-----------|-------------------------|----------------|--------|-------------------------------------------------------------------------------------|
 | /         | /                       | index          | GET    | Show's a splash page                                                                |
 | /user     | /user/:id               | show           | GET    | Shows a single user their dashboard: Contains dives and analysis.                   |
+| /user     | /user/login             | showLogin      | GET    | Shows a login page for a registered user.                                           |
+| /user     | /user/login             | processLogin   | POST   | Sends login data.                                                                   |
 | /user     | /user/sign-up           | newUser        | GET    | Shows a form for signing up a new user.                                             |
 | /user     | /user/sign-up           | createNewUser  | POST   | Takes form data and creates a new user.                                             |
 | /dive     | /dive/:id               | showDive       | GET    | Shows details about a single dive. Bonus: Allows other users to vouch for the dive. |
