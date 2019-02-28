@@ -12,3 +12,4 @@ This document will be updated in the future.  In the meantime, please see the [p
 ## Acknowledgements
 
 + Thanks to [CSS Gradient](https://www.css-gradient.com/) for generating the background gradient.
++ Thanks to MomentJS for helping me deal with dates.
