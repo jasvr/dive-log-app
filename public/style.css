@@ -22,6 +22,18 @@ body {
   margin-bottom: 2%;
 }
 
+.navbar-username-link {
+  text-decoration: none;
+  color: white;
+  font-weight: bolder;
+}
+
+.navbar-username-link:hover {
+  text-decoration: underline;
+  text-decoration-style: dashed;
+  color: white;
+}
+
 .homepage-jumbotron {
   width: 80%;
   margin: auto;
