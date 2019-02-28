@@ -11,5 +11,8 @@ module.exports = {
       console.log(divesite);
       res.render("divesite/showDivesite.hbs", {divesite});
     });
+  },
+  newDivesite: function(req, res) {
+    res.render("divesite/newDivesite");
   }
 };
