@@ -48,6 +48,11 @@ body {
   margin: auto;
 }
 
+.userCard {
+  width: 80%;
+  margin: auto;
+}
+
 .particle-container {
   position: absolute;
   top: 0;

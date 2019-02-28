@@ -5,6 +5,7 @@ const Dive = require("./dive");
 // const passportLocalMongoose = require("passport-local-mongoose");
 
 const UserSchema = new Schema({
+  name: String,
   username: { type: String, required: true, trim: true },
   password: String,
   certification: String,

@@ -8,6 +8,6 @@ router.get("/", (req,res) => {
 });
 
 router.use("/divesite", require("./divesite.js"));
-// router.use("/user", require("./user.js"));
+router.use("/user", require("./user.js"));
 
 module.exports = router;
