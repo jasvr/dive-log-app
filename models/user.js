@@ -1,8 +1,6 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
-const Dive = require("./dive");
-
-// const passportLocalMongoose = require("passport-local-mongoose");
+const passportLocalMongoose = require("passport-local-mongoose");
 
 const UserSchema = new Schema({
   name: String,
@@ -12,6 +10,6 @@ const UserSchema = new Schema({
   certificationDate: String,
 });
 
-// UserSchema.plugin(passportLocalMongoose);
+UserSchema.plugin(passportLocalMongoose);
 
 module.exports = UserSchema;

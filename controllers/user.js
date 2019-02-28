@@ -1,3 +1,4 @@
+const passport = require("passport");
 const { User } = require("../models/index");
 
 module.exports = {
@@ -10,4 +11,9 @@ module.exports = {
   newUser: function(req, res) {
     res.render("user/userSignUp.hbs");
   }
+  // createNewUser: function(req, res) {
+  //   const { name, email, password, certification, certificationDate } = req.body;
+    
+    
+  // }
 }
