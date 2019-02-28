@@ -9,5 +9,6 @@ router.get("/", (req,res) => {
 
 router.use("/divesite", require("./divesite.js"));
 router.use("/user", require("./user.js"));
+router.use("/dive", require("./dive.js"));
 
 module.exports = router;
