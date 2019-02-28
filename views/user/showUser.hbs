@@ -1,4 +1,4 @@
-<div class="card userCard">
+<div class="card user-intro-card">
   <div class="card-header">
     Diver Dashboard
   </div>
@@ -8,3 +8,18 @@
     {{!-- <a href="#" class="btn btn-primary">Go somewhere</a> --}}
   </div>
 </div>
+
+{{#if usersDives}}
+<div class="container user-dives-container">
+  {{#each usersDives}}
+  <div class="card user-dives-minicard">
+    <div class="card-body">
+      <h5 class="card-title">{{siteName}}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">{{date}}</h6>
+      <p class="card-text">{{notes}}</p>
+      <a href="../dive/{{id}}" class="card-link">More Info</a>
+    </div>
+  </div>
+  {{/each}}
+</div>
+{{/if}}

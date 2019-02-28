@@ -21,21 +21,27 @@ module.exports = {
       bottomTime,
       notes
     } = req.body;
-    Dive.create({
-      number,
-      date,
-      site,
-      visibility,
-      airTemp,
-      waterTemp,
-      weightUsed,
-      airUsed,
-      bottomTime,
-      notes,
-      owner: req.user._id
-    }).then(newDive => {
-      res.redirect(`/user/${req.user._id}`);
-    });
+    Divesite.findById(site, "name").then(retrievedSiteName => {
+      Dive.create({
+        number,
+        date,
+        site,
+        siteName: retrievedSiteName.name,
+        visibility,
+        airTemp,
+        waterTemp,
+        weightUsed,
+        airUsed,
+        bottomTime,
+        notes,
+        owner: req.user._id
+      }).then(newDive => {
+        res.redirect(`/user/${req.user._id}`);
+      });
+    })
+
+
+    
   },
   showDive: function(req, res) {
     Dive.findById(req.params.id).then(dive => {

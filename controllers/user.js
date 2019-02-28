@@ -1,11 +1,15 @@
 const passport = require("passport");
 const { User } = require("../models/index");
+const { Dive } = require("../models/index");
+const { Divesite} = require("../models/index");
 
 module.exports = {
   show: function(req, res) {
     User.findById(req.params.id).then(user => {
-      console.log(user);
-      res.render("user/showUser.hbs", { user });
+      Dive.find({owner: req.params.id}).then(usersDives => {
+        console.log(usersDives);
+        res.render("user/showUser", { user, usersDives });
+      })
     });
   },
   newUser: function(req, res) {

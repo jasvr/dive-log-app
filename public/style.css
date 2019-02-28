@@ -65,9 +65,22 @@ body {
   margin-bottom: 5%;
 }
 
-.userCard {
+.user-intro-card {
   width: 80%;
   margin: auto;
+  margin-bottom: 2rem;
+}
+
+.user-dives-container {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.user-dives-minicard {
+  margin: 1rem;
+  width: 18rem;
 }
 
 .dive-info-label {

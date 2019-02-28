@@ -8,6 +8,7 @@ Dive.deleteMany({}).then(function() {
     Dive.create({
       number: 1,
       site: diveID._id,
+      siteName: "Dibba Rock",
       visitbility: 50,
       airTemp: 82,
       waterTemp: 75,

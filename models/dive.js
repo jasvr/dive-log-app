@@ -8,6 +8,7 @@ const DiveSchema = new Schema({
     type: Schema.Types.ObjectId,
     ref: "Divesite"
   },
+  siteName: String,
   visibility: Number,
   airTemp: Number,
   waterTemp: Number,
