@@ -1,0 +1,76 @@
+<div class="card newDiveRegistrationCard">
+  <div class="card-header">
+    Update dive #{{dive.number}}
+  </div>
+  <div class="card-body">
+    <form action="/dive/{{dive.id}}/update?_method=PUT" method="post">
+
+      <div class="form-group">
+        <label for="number">Dive Number:</label>
+        <input type="number" class="form-control" name="number" id="number" value="{{dive.number}}">
+      </div>
+
+      <div class="form-group">
+        <label for="date">Date:</label>
+        <input type="date" class="form-control" name="date" id="date" value="{{dive.date}}">
+      </div>
+
+      <div class="form-group">
+        <label for="site">Dive Site:</label>
+        <select name="site" class="custom-select" {{#unless allDivesites}}disable{{/unless}}>
+          {{#if allDivesites}}
+          {{#each allDivesites}}
+          <option value="{{id}}">{{name}}</option>
+          {{/each}}
+          {{else}}
+          <option>Please register some dive sites first.</option>
+          {{/if}}
+        </select>
+        <small class="form-text text-muted">Don't see your favorite dive site? Please <a href="../divesite/new-dive-site">add it to our database</a> before registering your dive.</small>
+      </div>
+
+      <div class="form-group">
+        <label for="visibility">Visibility:</label>
+        <input type="number" class="form-control" name="visibility" id="visibility" value="{{dive.visibility}}">
+        <small class="form-text text-muted" >Please take care to only enter this value in feet (ft).</small>
+      </div>
+
+      <div class="form-group">
+        <label for="airTemp">Air Temperature:</label>
+        <input type="number" class="form-control" name="airTemp" id="airTemp" value="{{dive.airTemp}}">
+        <small class="form-text text-muted">Please take care to only enter this value in fahrenheit (F) with no units.</small>
+      </div>
+
+      <div class="form-group">
+        <label for="waterTemp">Water Temperature:</label>
+        <input type="number" class="form-control" name="waterTemp" id="waterTemp" value="{{dive.waterTemp}}">
+        <small class="form-text text-muted">Please take care to only enter this value in fahrenheit (F) with no units.</small>
+      </div>
+
+      <div class="form-group">
+        <label for="weightUsed">Weight Used:</label>
+        <input type="number" class="form-control" name="weightUsed" id="weightUsed" value="{{dive.weightUsed}}">
+        <small class="form-text text-muted">Please take care to only enter this value in imperial pounds (lbs) with no units.</small>
+      </div>
+
+      <div class="form-group">
+        <label for="airUsed">Air Used:</label>
+        <input type="number" class="form-control" name="airUsed" id="airUsed" value="{{dive.airUsed}}">
+        <small class="form-text text-muted">Please take care to only enter this value in pounds per square inch (PSI) with no units.</small>
+      </div>
+
+      <div class="form-group">
+        <label for="bottomTime">Bottom Time:</label>
+        <input type="number" class="form-control" name="bottomTime" id="bottomTime" value="{{dive.bottomTime}}">
+        <small class="form-text text-muted">Please take care to only enter this value in minutes with no units.</small>
+      </div>
+
+      <div class="form-group">
+        <label for="notes">Notes: </label>
+        <textarea class="form-control" name="notes" id="notes" rows="3">{{dive.notes}}</textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Log this dive</button>
+    </form>
+  </div>
+</div>
