@@ -2,10 +2,11 @@ const { User } = require("../models/index");
 
 User.deleteMany({}).then(function() {
   User.create({
-    name: "Paul Blake",
-    username: "pnblake@gmail.com",
-    password: null,
-    certification: "SSI - Junior Open Water Diver",
-    certificationDate: "2014-03-20"
+    username: "steve@teamzissou.com",
+    salt: "54d5e1599a8ec00f9d879b745d12cb8a2cd2a754436b7584c1460a98de777c7f",hash:"99b7eb54d00dc98eeb7f0cdfb3f0fda0f349e5b8b01e50efbfe5f11833dc14c150fc9f8a6dc492cac97771e6b51fdff57d4f4da84556ef157552cbd4c5be77383a0ffe739bfbd0383132aaa5e3a441f21f789d387ec87ba42d50702a51b9d4f1d45b2b17faa5a5483195723a28b5510b4fec804297fa869adebf3c286bc8b890986dd97e0333246717df0b698244217be7332fe5b0357b437ec5959228fc217fd63b0079527dde218990cce1d192cbde3e918ad22efc27aca849f3fd3eac74359f71d717f9f331f841d5a46dc53b2ce074bd9ecd66b0a5e846533b5ceade648957910ab8c5dfcd66bc2dc1d9bf9863abff7300a2967db5828ecde550a3976374e3225a8bfbe712b863d40efb9f7d252b7b7b3b2f717b0a6174f4fe2ea193c8897c7edd4e752d83fcc72bdae02a8a9eb03a4ebb2ede6a00684c14fbd9ce74f1363c997a68f81ea1a80fa925a34aa734eae43a3beed8fd42388b0288b4c5af8f54674e563cdbc5c5361f4bca062f16ae378a4f2cceb3dc5068aad75878c19aaaca5dd4827e645c0f161cb23ed2a688c9c4b8477e7a45836de48b4e2bda8fab4b2eb74d636ab019edc188fbe7e3f85aeaeebbf9cabc4da7ac963c5e897390060dee3ef3e0fbc5df9c5411694ebf13072c59f03929737641dbdd587dd03de110677013ee6a157b2fe70e64be52f736415efb82d1564e861091420443c178acc757d9",
+    __v: 0,
+    certification: "PADI",
+    certificationDate: "1974-02-16",
+    name: "Steve Zissou"
   });
 });
