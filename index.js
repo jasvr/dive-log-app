@@ -40,8 +40,6 @@ app.use(express.static("public"));
 
 app.use(require("./routes/index"));
 
-// app.listen(3000, () => console.log("Listening on port 3000"));
-
 app.listen(app.get("port"), () => {
   console.log(`👾 App listening on port ${app.get("port")}`);
 })
