@@ -2,12 +2,18 @@ const passport = require("passport");
 const { User } = require("../models/index");
 const { Dive } = require("../models/index");
 const { Divesite} = require("../models/index");
+const moment = require("moment");
 
 module.exports = {
   show: function(req, res) {
     User.findById(req.params.id).then(user => {
       Dive.find({owner: req.params.id}).then(usersDives => {
-        console.log(usersDives);
+        usersDives.forEach(dive => {
+          let prettyDate = moment(dive.date);
+          prettyDate = prettyDate.format("MMM Do, YYYY");
+          dive.dateFormatted = prettyDate;
+          return dive;
+        })
         res.render("user/showUser", { user, usersDives });
       })
     });

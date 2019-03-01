@@ -4,7 +4,7 @@ const authenticatedUser = require("../utils/authenticatedUser");
 
 //Create a way to view the homepage
 router.get("/", (req,res) => {
-  res.render("index");
+  res.render("index", {user});
 });
 
 router.use("/divesite", require("./divesite.js"));
