@@ -7,6 +7,7 @@
       <div class="card-body">
         <h5 class="card-title"><a href="../divesite/{{divesite.id}}">{{divesite.name}}</a></h5>
         <h6 class="card-subtitle mb-2 text-muted">{{prettyDate}}</h6>
+        <p class="card-text">{{dive.notes}}</p>
         <ul class="list-group list-group-flush">
           <li class="list-group-item"><span class="dive-info-label">Visibility: </span>{{dive.visibility}} ft</li>
           <li class="list-group-item"><span class="dive-info-label">Air Temperature: </span>{{dive.airTemp}}ºF</li>
@@ -17,11 +18,13 @@
           <li class="list-group-item"><span class="dive-info-label">Notes: </span>{{dive.notes}} ft</li>
         </ul>
 
-
-        {{!-- Need update button here --}}
-        {{!-- <form action="/divesite/{{divesite.id}}?_method=DELETE" method="post" class="d-inline">
+        {{#if user}}
+        <a href="/dive/{{divesite.id}}/update" class="btn btn-info">Update</a>
+        {{/if}}
+        <form action="/dive/{{divesite.id}}?_method=DELETE" method="post" class="d-inline">
           <input type="submit" value="Delete" class="btn btn-danger">
-        </form> --}}
+        </form>
+        
       </div>
     </div>
   </div>
