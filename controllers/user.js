@@ -7,7 +7,7 @@ const moment = require("moment");
 module.exports = {
   show: function(req, res) {
     User.findById(req.params.id).then(user => {
-      Dive.find({owner: req.params.id}).then(usersDives => {
+      Dive.find({owner: req.params.id}).sort('-date').then(usersDives => {
         usersDives.forEach(dive => {
           let prettyDate = moment(dive.date);
           prettyDate = prettyDate.format("MMM Do, YYYY");
