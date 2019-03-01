@@ -1,4 +1,4 @@
-<div style="text-align: center"><img src="https://media.giphy.com/media/Ik1IUrmaxttDO/giphy.gif" width="90%"></div>
+<div style="text-align: center"><img src="https://media.giphy.com/media/Ik1IUrmaxttDO/giphy.gif" width="100%"></div>
 
 # Dive Log
 
