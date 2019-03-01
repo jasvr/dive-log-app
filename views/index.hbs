@@ -2,8 +2,8 @@
   <div class="jumbotron align-middle">
     <h1 class="display-4">Welcome to Dive Log{{#if user}}, {{user.name}}{{/if}}!</h1>
     <p class="lead">Dive log is a straightforward app for logging your dives.</p>
-    <hr class="my-4">
     <p>It stores your dives and provides analysis about them.</p>
+    <hr class="my-4">
     {{#if user}}
     <a class="btn btn-primary btn-lg" href="../user/{{user.id}}" role="button">Take me to my dives!</a>
     {{else}}
