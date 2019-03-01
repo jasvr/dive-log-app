@@ -14,9 +14,6 @@
         </ul>
 
         {{#if user}}
-        {{!-- <form action="/divesite/{{divesite.id}}" class="d-inline">
-          <input type="submit" value="Update" class="btn btn-info">
-        </form> --}}
         <a href="/divesite/{{divesite.id}}/update" class="btn btn-info">Update</a>
         <form action="/divesite/{{divesite.id}}?_method=DELETE" method="post" class="d-inline">
           <input type="submit" value="Delete" class="btn btn-danger">
