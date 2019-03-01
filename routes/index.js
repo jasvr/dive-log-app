@@ -11,4 +11,10 @@ router.use("/divesite", require("./divesite.js"));
 router.use("/user", require("./user.js"));
 router.use("/dive", require("./dive.js"));
 
+
+router.get('*', function(req, res){
+  // res.send(404);
+  res.render("404");
+});
+
 module.exports = router;
