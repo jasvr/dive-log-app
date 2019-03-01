@@ -79,3 +79,5 @@ Extending the idea further, the app could make API calls to weather services to 
 | /divesite | /divesite/all           | showAllDivesites| GET   | Shows all dive sites registered in the database.                                    |
 | /divesite | /divesite/new-dive-site | newDivesite    | GET    | Shows a form for registering a new dive site.                                       |
 | /divesite | /divesite/new-dive-site | createDivesite | POST   | Takes form data and creates a new dive site.                                        |
+| /divesite | /divesite/:id/update    | showDiveSiteUpdate| GET | Shows a form to update divesite data.                                               |
+| /divesite | /divesite/:id/update    | updateDiveSite | PUT    | Takes form data and updates dive site.                                              |

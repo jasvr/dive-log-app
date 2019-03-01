@@ -1,0 +1,33 @@
+<div class="card newDiveRegistrationCard">
+  <div class="card-header">
+    Update {{divesite.name}} divesite
+  </div>
+  <div class="card-body">
+    <form action="/divesite/{{divesite.id}}/update?_method=PUT" method="post">
+
+      <div class="form-group">
+        <label for="name">Dive site name:</label>
+        <input type="text" class="form-control" name="name" id="name" value="{{divesite.name}}">
+      </div>
+
+      <div class="form-group">
+        <label for="coordinates">Coordinates: </label>
+        <input type="text" class="form-control" name="coordinates" id="coordinates"
+          value="{{divesite.coordinates}}">
+      </div>
+
+      <div class="form-group">
+        <label for="type">Type: </label>
+        <input type="text" class="form-control" id="type" name="type" 
+          value="{{divesite.type}}">
+      </div>
+
+      <div class="form-group">
+        <label for="description">Description: </label>
+        <textarea class="form-control" name="description" id="description" rows="3">{{divesite.description}}</textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+</div>
