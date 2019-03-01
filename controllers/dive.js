@@ -45,7 +45,9 @@ module.exports = {
   },
   showDive: function(req, res) {
     Dive.findById(req.params.id).then(dive => {
+      console.log("Dive: " + dive.site);
       Divesite.findById(dive.site).then(divesite => {
+        console.log(divesite.name);
         let prettyDate = moment(dive.date);
         prettyDate = prettyDate.format("MMM Do, YYYY");
         res.render("dive/showDive", {dive, divesite, prettyDate});

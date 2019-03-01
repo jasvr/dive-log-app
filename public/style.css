@@ -72,6 +72,10 @@ body {
   margin-bottom: 5%;
 }
 
+.card-text {
+  white-space: pre-wrap;
+}
+
 .user-intro-card {
   width: 80%;
   margin: auto;
