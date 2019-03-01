@@ -40,8 +40,8 @@ You'll need to have Mongo running on your local machine.
 
 * Zakk Fleischman, lead instructor
 * Hamad Malik, Instructor
-* [Vincent Garreau](https://vincentgarreau.com/en), for his awesome [ParticlesJS library](https://github.com/VincentGarreau/particles.js/)
-* [CSS Gradient](https://www.css-gradient.com/) for generating the background gradient.
+* [Vincent Garreau](https://vincentgarreau.com/en), for his awesome [ParticlesJS library](https://github.com/VincentGarreau/particles.js/), which was used to generate the bubbles
+* [CSS Gradient](https://www.css-gradient.com/) for generating the background gradient
 * Wes Anderson, for making great films
 
 
