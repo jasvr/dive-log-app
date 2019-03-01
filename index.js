@@ -16,7 +16,7 @@ app.use(methodOverride("_method"));
 app.use(cookieParser());
 app.use(
   session({
-    secret: "",
+    secret: "DIVOCEAN DIVE CENTER",
     resave: false,
     saveUninitialized: false
   })
