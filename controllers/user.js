@@ -36,7 +36,6 @@ module.exports = {
         user.certification = certification;
         user.certificationDate = certificationDate;
         user.save();
-        console.log("Got here."); 
 
         authenticate(req, res, function() {
           req.flash("success", "Welcome aboard!");
